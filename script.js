@@ -20,7 +20,7 @@ const products = [
     price: 6.49,
     tag: "Spicy • Tangy • Bold",
     description: "A fiery, zesty version for snackers who want more punch in every bite.",
-    image: "images/PMPERIPERI.jpeg",
+    image: "images/PMPeriPeri.jpeg",
     featured: true
   },
   {
