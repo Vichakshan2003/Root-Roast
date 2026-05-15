@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Root & Roast | Wholesome Indian Snacks</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="promo-bar">
+    Free shipping on orders over $35 • Premium makhana & millet snacks • Rooted in wellness
+  </div>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="#" class="logo-wrap">
+        <img src="images/RRLogo.png" alt="Root & Roast logo" class="brand-logo">
+        <div class="brand-text">
+          <span class="brand-name">Root & Roast</span>
+          <span class="brand-tagline">Ancient ingredients, modern snacking</span>
+        </div>
+      </a>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#recipes">Recipes</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="cart-button" id="cartButton" aria-label="Open cart">
+          Cart
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero section">
+    <div class="container hero-grid">
+      <div class="hero-content reveal">
+        <span class="eyebrow">Wholesome Snacking, Reimagined</span>
+        <h1>Premium Phool Makhana & Millet Snacks for the Modern Pantry</h1>
+        <p>
+          Root & Roast brings together the airy crunch of lotus seeds and the nourishing goodness
+          of millet-based snacks in one elevated, everyday collection. Thoughtfully made, flavor-forward,
+          and rooted in Indian ingredients.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#shop" class="btn btn-primary">Shop Now</a>
+          <a href="#story" class="btn btn-secondary">Explore Our Story</a>
+        </div>
+
+        <div class="hero-chips">
+          <span class="chip">Roasted, Not Fried</span>
+          <span class="chip">Millet Goodness</span>
+          <span class="chip">Mindful Snacking</span>
+          <span class="chip">Indian Ingredients</span>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <div class="hero-image-card">
+          <img src="images/collage.png" alt="Root & Roast snack collection" class="hero-image">
+          <div class="hero-note">
+            <strong>Now featuring</strong>
+            Phool Makhana, Ragi Thattai, Millet Chivda, Crackers, Cereal, Puffs, and more.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="categories">
+    <div class="container">
+      <h2 class="section-title reveal">Shop by Category</h2>
+      <p class="section-subtitle reveal">
+        Discover pantry-friendly snacks across two hero collections: roasted Phool Makhana and millet-powered favorites.
+      </p>
+
+      <div class="category-grid">
+        <article class="category-card reveal">
+          <img src="images/pm3.png" alt="Phool Makhana category" class="category-image">
+          <div class="category-body">
+            <span class="category-kicker">Collection 01</span>
+            <h3>Phool Makhana</h3>
+            <p>
+              Himalayan Salt, Peri Peri, Pudina Masala, and Caramel Jaggery — light, crunchy, and full of character.
+            </p>
+            <button class="btn btn-primary shop-filter-btn" data-shop-filter="makhana">Shop Makhana</button>
+          </div>
+        </article>
+
+        <article class="category-card reveal">
+          <img src="images/millet3.png" alt="Millet snacks category" class="category-image">
+          <div class="category-body">
+            <span class="category-kicker">Collection 02</span>
+            <h3>Millet Snacks</h3>
+            <p>
+              From Ragi Thattai and Millet Chivda to Crackers, Puffs, and Cereal, these are wholesome staples with a crunch.
+            </p>
+            <button class="btn btn-primary shop-filter-btn" data-shop-filter="millet">Shop Millet</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light-section">
+    <div class="container">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Customer Favorites</span>
+          <h2 class="section-title align-left">Featured Bestsellers</h2>
+        </div>
+        <a href="#shop" class="text-link">View full catalog</a>
+      </div>
+
+      <div class="product-grid featured-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="shop">
+    <div class="container">
+      <h2 class="section-title reveal">Shop Root & Roast</h2>
+      <p class="section-subtitle reveal">
+        Build your cart with Phool Makhana and millet-based favorites. The prices below are front-end placeholders and can be updated anytime.
+      </p>
+
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">All Products</button>
+        <button class="filter-btn" data-filter="makhana">Phool Makhana</button>
+        <button class="filter-btn" data-filter="millet">Millet Snacks</button>
+        <button class="filter-btn" data-filter="featured">Bestsellers</button>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+    </div>
+  </section>
+
+  <section class="section" id="story">
+    <div class="container story-grid">
+      <div class="story-image reveal">
+        <img src="images/About.png" alt="Root & Roast ingredients and snacks" class="about-photo">
+      </div>
+
+      <div class="story-content reveal">
+        <span class="eyebrow">Our Story</span>
+        <h2 class="section-title align-left">Where heritage ingredients meet modern snacking</h2>
+        <p>
+          Root & Roast began with a simple idea: Indian pantry ingredients deserve a fresher, more elevated place in everyday snacking.
+          We loved the light texture and cultural depth of Phool Makhana, and we saw the same opportunity in millet-based foods —
+          nourishing, versatile, and deeply rooted in tradition.
+        </p>
+        <p>
+          So we built a brand that celebrates both. One side of the collection highlights roasted lotus seeds in bold and classic flavors.
+          The other brings forward millet snacks like Ragi Thattai, Chivda, Cereal, Crackers, and Puffs for a pantry that feels wholesome,
+          flavorful, and intentional.
+        </p>
+
+        <div class="story-points">
+          <div class="story-point">Premium Phool Makhana collection</div>
+          <div class="story-point">Millet-powered everyday staples</div>
+          <div class="story-point">Clean, balanced snacking direction</div>
+          <div class="story-point">Image-ready, retail-friendly branding</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light-section" id="benefits">
+    <div class="container">
+      <h2 class="section-title reveal">Why snack with Root & Roast?</h2>
+      <p class="section-subtitle reveal">
+        We keep the wellness-forward philosophy from the original site while broadening the range into a fuller e-commerce pantry.
+      </p>
+
+      <div class="benefits-grid">
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">🌿</div>
+          <h3>Ingredient-led</h3>
+          <p>
+            Phool Makhana and millet are the heroes here — not filler, not gimmicks, but ingredients with real heritage and everyday appeal.
+          </p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">✨</div>
+          <h3>Balanced wellness</h3>
+          <p>
+            Light crunch, thoughtful roasting, and pantry-friendly choices create a snack experience that feels better without losing flavor.
+          </p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">🥣</div>
+          <h3>More than one format</h3>
+          <p>
+            From makhana to cereal, crackers, puffs, and namkeen-style mixes, the brand is built for repeat use across moods and moments.
+          </p>
+        </article>
+
+        <article class="benefit-card reveal">
+          <div class="benefit-icon">🛒</div>
+          <h3>Store-ready experience</h3>
+          <p>
+            Explore by category, add products to cart, and build a basket that feels like a real healthy-snacking storefront.
+          </p>
+        </article>
+      </div>
+
+      <div class="health-facts reveal">
+        <div class="fact-card">
+          <h4>Phool Makhana</h4>
+          <p>Known for its airy crunch, light snacking feel, and strong connection to traditional Indian food culture.</p>
+        </div>
+        <div class="fact-card">
+          <h4>Millet Snacks</h4>
+          <p>Great for building a broader pantry range with grains that support a more wholesome and ingredient-forward story.</p>
+        </div>
+        <div class="fact-card">
+          <h4>Modern Use Cases</h4>
+          <p>Office snacking, travel, movie nights, breakfast add-ons, and pantry staples that feel clean and versatile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="container">
+      <h2 class="section-title reveal">From ingredient to pantry staple</h2>
+      <p class="section-subtitle reveal">
+        This section keeps the educational feel of the original site, now expanded to support the wider Root & Roast portfolio.
+      </p>
+
+      <div class="process-video reveal">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/fFg6BDCdB_I"
+            title="From lotus seed to pantry staple"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="process-grid">
+        <article class="process-card reveal">
+          <span class="step-number">01</span>
+          <h3>Ingredient selection</h3>
+          <p>
+            We start with ingredients that support the brand’s identity: premium makhana and millet-focused snack formats.
+          </p>
+        </article>
+
+        <article class="process-card reveal">
+          <span class="step-number">02</span>
+          <h3>Clean preparation</h3>
+          <p>
+            Thoughtful prep and handling help the collection feel polished, reliable, and ready for a more premium shelf presence.
+          </p>
+        </article>
+
+        <article class="process-card reveal">
+          <span class="step-number">03</span>
+          <h3>Roasting & seasoning</h3>
+          <p>
+            Flavor comes through roasting, seasoning, and texture — not just noise. The goal is a snack that feels intentional and repeatable.
+          </p>
+        </article>
+
+        <article class="process-card reveal">
+          <span class="step-number">04</span>
+          <h3>Retail-ready packaging</h3>
+          <p>
+            The final product should feel image-rich, giftable, pantry-friendly, and naturally suited to an e-commerce storefront.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section light-section">
+    <div class="container">
+      <h2 class="section-title reveal">Loved by mindful snackers</h2>
+      <p class="section-subtitle reveal">
+        Keep these as testimonials for now, then swap them with real customer feedback later.
+      </p>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            The makhana has that clean crunch I wanted, and the millet range makes the whole site feel like a real pantry brand instead of a single-product page.
+          </p>
+          <span class="review-author">— Aanya</span>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            The Ragi Thattai and Millet Chivda feel familiar but more elevated. It’s the kind of store I’d actually browse for healthier Indian snacks.
+          </p>
+          <span class="review-author">— Meera</span>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="stars">★★★★★</div>
+          <p>
+            I like that it doesn’t abandon the wellness messaging, but it also feels like a real shopping experience with categories and cart behavior.
+          </p>
+          <span class="review-author">— Rohan</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="recipes">
+    <div class="container">
+      <h2 class="section-title reveal">Ideas beyond the pack</h2>
+      <p class="section-subtitle reveal">
+        Recipes and serving ideas keep the brand lively and help position Root & Roast as more than just a checkout page.
+      </p>
+
+      <div class="recipe-grid">
+        <article class="recipe-card reveal">
+          <img src="images/TrailMix.jpg" alt="Makhana trail mix" class="recipe-image">
+          <div class="recipe-body">
+            <h3>Makhana Trail Mix</h3>
+            <p>Pair roasted makhana with nuts, seeds, and dried fruit for a clean pantry snack.</p>
+          </div>
+        </article>
+
+        <article class="recipe-card reveal">
+          <img src="images/Chaat.jpg" alt="Millet chivda bowl" class="recipe-image">
+          <div class="recipe-body">
+            <h3>Millet Chivda Bowl</h3>
+            <p>Turn Millet Chivda into a quick savory mix for teatime, hosting, or crunchy toppings.</p>
+          </div>
+        </article>
+
+        <article class="recipe-card reveal">
+          <img src="images/milletBowl.jpg" alt="Millet cereal breakfast bowl" class="recipe-image">
+          <div class="recipe-body">
+            <h3>Morning Millet Bowl</h3>
+            <p>Layer millet cereal with yogurt, fruit, and seeds for an easy breakfast-ready pantry staple.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section newsletter-section">
+    <div class="container">
+      <div class="newsletter-card reveal">
+        <div class="newsletter-copy">
+          <span class="eyebrow">Stay Connected</span>
+          <h2>Get product drops, offers, and pantry inspiration</h2>
+          <p>
+            This form is front-end only for now, but it gives the website the full e-commerce feel you wanted.
+          </p>
+        </div>
+
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="emailInput" placeholder="Enter your email address" required>
+          <button type="submit" class="btn btn-primary">Join the List</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="images/root-roast-logo.png" alt="Root & Roast footer logo" class="footer-logo">
+        <div>
+          <h3>Root & Roast</h3>
+          <p>Phool Makhana, millet snacks, and a more thoughtful pantry.</p>
+        </div>
+      </div>
+
+      <div class="footer-links-wrap">
+        <div>
+          <h4>Shop</h4>
+          <a href="#shop">All Products</a>
+          <a href="#categories">Collections</a>
+          <a href="#recipes">Recipes</a>
+        </div>
+
+        <div>
+          <h4>Brand</h4>
+          <a href="#story">Our Story</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#process">Process</a>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <a href="mailto:hello@rootandroast.com">hello@rootandroast.com</a>
+          <a href="#">Instagram</a>
+          <a href="#">Pinterest</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Root & Roast. All rights reserved.</span>
+      <span>Built as a front-end e-commerce concept in HTML, CSS, and JS.</span>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <p>Your cart is empty.</p>
+        <span>Add some snacks to get started.</span>
+      </div>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-summary">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+      <p class="cart-note">Demo cart only — connect a backend later for real checkout.</p>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
